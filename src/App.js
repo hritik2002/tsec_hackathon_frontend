@@ -15,6 +15,7 @@ function App() {
   });
 
   return (
+    <>
     <BrowserRouter>
       <div
         style={{
@@ -36,6 +37,7 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
+    </>
   );
 }
 
