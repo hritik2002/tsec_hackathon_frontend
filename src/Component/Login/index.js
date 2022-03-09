@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 // import "./styles.css";
 function Login() {
   const [state, setState] = useState({
@@ -56,6 +56,9 @@ function Login() {
                   <option
                     selected={state.userType === "student"}
                     value="student"
+                    style={{
+                      overflow: "auto",
+                    }}
                   >
                     Student
                   </option>
@@ -67,7 +70,6 @@ function Login() {
                   </option>
                 </select>
               </div>
-              <br />
 
               <div className="form-field">
                 <button

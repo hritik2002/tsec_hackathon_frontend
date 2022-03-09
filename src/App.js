@@ -17,15 +17,23 @@ function App() {
   return (
     <>
     <BrowserRouter>
-      <Header />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/dashboard" element={<UserDashboard />}></Route>
-          <Route path='/dummy' element={<CompanyDashboard/>}></Route>
-          <Route path="*" element={<div>Page not found</div>}></Route>
-        </Routes>
-      <Footer/>      
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          height:"100vh" 
+        }}
+      >
+        <Header />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/dashboard" element={<UserDashboard />}></Route>
+        <Route path="*" element={<div>Page not found</div>}></Route>
+      </Routes>
+      <Footer />
+      </div>
     </BrowserRouter>
     </>
   );
