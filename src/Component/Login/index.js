@@ -17,6 +17,8 @@ function Login() {
                 type="text"
                 placeholder="Username"
                 required
+                value={state.email}
+                onChange={(e) => setState({ ...state, email: e.target.value })}
               />
             </label>
           </div>
@@ -27,6 +29,10 @@ function Login() {
                 type="password"
                 placeholder="Password"
                 required
+                value={state.password}
+                onChange={(e) =>
+                  setState({ ...state, password: e.target.value })
+                }
               />
             </label>
           </div>
