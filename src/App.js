@@ -15,7 +15,15 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          height:"100vh" 
+        }}
+      >
+        <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/login" element={<Login />}></Route>
@@ -23,6 +31,7 @@ function App() {
         <Route path="*" element={<div>Page not found</div>}></Route>
       </Routes>
       <Footer />
+      </div>
     </BrowserRouter>
   );
 }
