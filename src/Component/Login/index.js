@@ -13,8 +13,8 @@ function Login() {
       <div className="row" style={{ width: "50%", margin: "auto" }}>
         <div className="col s12 ">
           <div className="card">
-            <div className="card-action teal lighten-1 white-text">
-              <h3>Login Form</h3>
+            <div className="card-action  lighten-1 white-text">
+              <h3 style={{color:"rgba(0,0,0,0.6)"}}   >Login Form</h3>
             </div>
 
             <div className="card-content">

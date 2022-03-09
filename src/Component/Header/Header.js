@@ -3,7 +3,7 @@ import * as React from "react";
 export default function Header() {
   return (
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper black light">
         <a href="/" class="brand-logo">
           Logo
         </a>
