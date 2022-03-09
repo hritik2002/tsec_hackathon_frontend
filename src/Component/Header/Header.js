@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export default function Header() {
+export default function Header(){
   return (
     <nav>
       <div class="nav-wrapper black light">
