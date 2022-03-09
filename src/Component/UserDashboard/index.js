@@ -30,7 +30,7 @@ function UserDashboard() {
   ]);
   return (
     <>
-      <div className="applications " style={{margin:"auto"}}   >
+      <div className="applications " style={{ margin: "auto" }}>
         <h3 className="text-center ">My Applications</h3>
         <table className="striped ">
           <thead>

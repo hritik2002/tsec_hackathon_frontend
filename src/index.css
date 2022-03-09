@@ -14,11 +14,10 @@ code {
     monospace;
 }
 
-a{
+a {
   text-decoration: none;
-
 }
-a:hover{
+a:hover {
   color: aliceblue;
 }
 
@@ -26,15 +25,55 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 main {
   flex: 1 0 auto;
 }
 
-*{
-  overflow: hidden;
+* {
   box-sizing: border-box;
   margin: 0%;
   padding: 0%;
+}
+.homePic_keyFrame {
+  animation: infinite;
+
+  animation-name: homePagePic;
+  animation-duration: 6s;
+  transition: ease;
+  animation-timing-function: linear;
+}
+@keyframes homePagePic {
+  0% {
+    transform: translateY(-100px);
+  }
+  50% {
+    transform: translateY(-140px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+.loginPic_keyFrame {
+  animation: infinite;
+
+  animation-name: loginPagePic;
+  animation-duration: 6s;
+  transition: ease;
+  animation-timing-function: linear;
+}
+
+@keyframes loginPagePic {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

@@ -30,33 +30,29 @@ function App() {
   ];
 
   return (
-    <>
-      <BrowserRouter>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            height: "100vh",
-            background: "rgba(0,0,0,0.04)",
-          }}
-        >
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/dashboard" element={<UserDashboard />}></Route>
-            <Route path="/register" element={<UserRegister />}></Route>
-            <Route
-              path="/calendar"
-              element={<Calendar events={data} />}
-            ></Route>
-            <Route path="*" element={<div>Page not found</div>}></Route>
-          </Routes>
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        <Header />
+        {/* <div
+          style={{ width: "100%", height: "100vh", background: "blue" }}
+        ></div> */}
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/dashboard" element={<UserDashboard />}></Route>
+          <Route path="/register" element={<UserRegister />}></Route>
+          <Route path="/calendar" element={<Calendar events={data} />}></Route>
+          <Route path="*" element={<div>Page not found</div>}></Route>
+        </Routes>
+        {/* <Footer /> */}
+      </div>
+    </BrowserRouter>
   );
 }
 

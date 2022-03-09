@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import loginImg from "../../Assets/login.svg";
 // import "./styles.css";
 function Login() {
   const [state, setState] = useState({
@@ -9,12 +10,29 @@ function Login() {
   });
   const history = useNavigate();
   return (
-    <>
-      <div className="row" style={{ width: "50%", margin: "auto" }}>
+    <div
+      style={{
+        background: "rgba(0,0,0,0.85)",
+        height: "93.4vh",
+        display: "flex",
+        justifyContent: "space-evenly",
+        alignItems: "center",
+        padding: "0 10%",
+      }}
+    >
+      <div
+        className="row"
+        style={{
+          width: "40%",
+          margin: "auto",
+          minWidth: "400px",
+          maxWidth: "600px",
+        }}
+      >
         <div className="col s12 ">
           <div className="card">
             <div className="card-action  lighten-1 white-text">
-              <h3 style={{color:"rgba(0,0,0,0.6)"}}   >Login Form</h3>
+              <h3 style={{ color: "rgba(0,0,0,0.6)" }}>Login Form</h3>
             </div>
 
             <div className="card-content">
@@ -73,19 +91,24 @@ function Login() {
 
               <div className="form-field">
                 <button
-                  className="btn-large waves-effect waves-dark"
+                  className="btn-large waves-effect waves-dark blue"
                   style={{ width: "100%" }}
                   onClick={async () => {
-                    console.log(state);
-                    const response = await fetch("http://localhost:5000/api/auth/login", {
-                      method:"POST",
-                      body: JSON.stringify({"username":state.email, "password": state.password}),
-                      credentials: "include",
-                      mode:"cors",
-                      headers: {
-                        "Content-Type": "application/json",
-                      },
-                    });
+                    const response = await fetch(
+                      "http://localhost:5000/api/auth/login",
+                      {
+                        method: "POST",
+                        body: JSON.stringify({
+                          username: state.email,
+                          password: state.password,
+                        }),
+                        credentials: "include",
+                        mode: "cors",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                      }
+                    );
                     const data = await response.json();
                     console.log(data);
 
@@ -100,7 +123,15 @@ function Login() {
           </div>
         </div>
       </div>
-    </>
+      <div style={{ textAlign: "center", width: "50%" }}>
+        <img
+          className="loginPic_keyFrame"
+          src={loginImg}
+          alt=""
+          style={{ width: "80%", aspectRatio: "1", transform: "scale(3)" }}
+        />
+      </div>
+    </div>
   );
 }
 
