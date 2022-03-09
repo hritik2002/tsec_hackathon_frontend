@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 const CompanyDashboard = () => {
     return (
@@ -16,7 +17,7 @@ const CompanyDashboard = () => {
     
             <tbody>
               <tr>
-                <td>Alvin</td>
+                <td><NavLink to={`/userid`}>Alvin</NavLink></td>
                 <td>Eclair</td>
                 <td>$0.87</td>
                 <td><span className="new badge blue" data-badge-caption="In Touch">.</span></td>

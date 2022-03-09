@@ -7,6 +7,8 @@ import Header from "./Component/Header/Header";
 import Footer from "./Component/Footer/Footer";
 import UserDashboard from "./Component/UserDashboard";
 import UserRegister from "./Component/UserRegister";
+import UserProfile from "./Component/UserProfile"
+import CompanyDashboard from "./Component/CompanyDashboard";
 
 function App() {
   document.addEventListener("DOMContentLoaded", function () {
@@ -31,7 +33,9 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/dashboard" element={<UserDashboard />}></Route>
-          <Route path="/user" element={<UserRegister />}></Route>
+          <Route path='/dummy' element={<CompanyDashboard/>}></Route>
+          <Route path="/register" element={<UserRegister />}></Route>
+          <Route path='/userid' element={<UserProfile/>}></Route>
           <Route path="*" element={<div>Page not found</div>}></Route>
         </Routes>
         <Footer />

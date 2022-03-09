@@ -24,27 +24,27 @@ function index() {
                 <div class="row">
                   <div class="input-field col s3">
                     <input type="text" class="validate" />
-                    <label for="first_name">User Name</label>
+                    <label for="username">User Name</label>
                   </div>
                   <div class="input-field col s3">
-                    <input type="text" class="validate" />
-                    <label for="last_name">Email</label>
+                    <input type="email" class="validate" />
+                    <label for="email">Email</label>
                   </div>
                   <div class="input-field col s3">
-                    <input type="text" class="validate" />
+                    <input type="password" class="validate" />
                     <label for="password">Password</label>
                   </div>
                   <div class="input-field col s3">
                     <input type="number" class="validate" />
-                    <label for="email">Age</label>
+                    <label for="age">Age</label>
                   </div>
                 </div>
                 <div class="row"></div>
                 <div class="row">
                   <div class="input-field col s3">
                     <input
-                      id="last_name"
-                      name="last_name"
+                      id="resume"
+                      name="resume"
                       type="file"
                       class="validate"
                     />
