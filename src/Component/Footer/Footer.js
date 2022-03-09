@@ -3,7 +3,7 @@ import '../../Assets/Footer.css';
 const Footer = () => {
     return(
         <>
-            <footer className="page-footer footer">
+            <footer className="page-footer footer" style={{"position": "fixed", "bottom": 0, "left": 0, "width": "100%"}}>
                 <div className="container">
                     <div className="row">
                     <div className="col l6 s12">
