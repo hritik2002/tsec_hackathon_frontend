@@ -75,8 +75,20 @@ function Login() {
                 <button
                   className="btn-large waves-effect waves-dark"
                   style={{ width: "100%" }}
-                  onClick={() => {
+                  onClick={async () => {
                     console.log(state);
+                    const response = await fetch("http://localhost:5000/api/auth/login", {
+                      method:"POST",
+                      body: JSON.stringify({"username":state.email, "password": state.password}),
+                      credentials: "include",
+                      mode:"cors",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                    });
+                    const data = await response.json();
+                    console.log(data);
+
                     history("/dashboard");
                   }}
                 >
